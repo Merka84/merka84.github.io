@@ -1,1 +1,244 @@
-Akram Shokri
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akram Shokri - Software Professional Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* Tailwind gray-50 */
+            color: #334155; /* Tailwind slate-700 */
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+        .section-title {
+            color: #1e293b; /* Tailwind slate-900 */
+            border-bottom: 2px solid #64748b; /* Tailwind slate-500 */
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .card {
+            background-color: #ffffff;
+            border-radius: 0.75rem; /* rounded-xl */
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .btn-primary {
+            background-color: #3b82f6; /* Tailwind blue-500 */
+            color: #ffffff;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            transition: background-color 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #2563eb; /* Tailwind blue-600 */
+        }
+        .skill-badge {
+            background-color: #e0f2fe; /* Tailwind blue-100 */
+            color: #1e40af; /* Tailwind blue-800 */
+            padding: 0.3rem 0.75rem;
+            border-radius: 0.5rem; /* rounded-lg */
+            font-size: 0.875rem; /* text-sm */
+            font-weight: 500; /* font-medium */
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-8 rounded-b-xl shadow-lg">
+        <div class="container flex flex-col md:flex-row items-center justify-between">
+            <div class="text-center md:text-left mb-4 md:mb-0">
+                <h1 class="text-4xl font-bold mb-2">Akram Shokri</h1>
+                <p class="text-xl font-light">Experienced Software Professional & Technical Leader</p>
+            </div>
+            <nav>
+                <ul class="flex space-x-6">
+                    <li><a href="#about" class="hover:text-blue-200 transition-colors duration-300">About</a></li>
+                    <li><a href="#skills" class="hover:text-blue-200 transition-colors duration-300">Skills</a></li>
+                    <li><a href="#experience" class="hover:text-blue-200 transition-colors duration-300">Experience</a></li>
+                    <li><a href="#projects" class="hover:text-blue-200 transition-colors duration-300">Projects</a></li>
+                    <li><a href="#contact" class="hover:text-blue-200 transition-colors duration-300">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container py-8">
+
+        <section id="about" class="card">
+            <h2 class="text-3xl font-semibold section-title">About Me</h2>
+            <p class="text-lg leading-relaxed mb-4">
+                I am an experienced software professional with over 10 years of success in Agile product development, stakeholder engagement, and technical leadership. I am skilled in delivering high-impact software solutions within complex, high-tech environments. Adept in SAFe and Scrum frameworks, I have a strong track record in communication, strategic decision-making, and driving cross-functional collaboration.
+            </p>
+            <p class="text-lg leading-relaxed">
+                I hold an EngD (Engineering Doctorate) in Software Technology from Technische Universiteit Eindhoven (TU/e), Netherlands, and an M.Sc. in Artificial Intelligence from Iran University of Science and Technology. My academic background combined with extensive industry experience allows me to bridge theoretical knowledge with practical, scalable solutions.
+            </p>
+        </section>
+
+        <section id="skills" class="card">
+            <h2 class="text-3xl font-semibold section-title">Skills & Expertise</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div>
+                    <h3 class="text-xl font-medium mb-3 text-slate-800">Programming Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Java</span>
+                        <span class="skill-badge">C</span>
+                        <span class="skill-badge">C++</span>
+                        <span class="skill-badge">C#</span>
+                        <span class="skill-badge">Matlab</span>
+                        <span class="skill-badge">Python</span>
+                        <span class="skill-badge">Javascript</span>
+                        <span class="skill-badge">Kotlin</span>
+                        <span class="skill-badge">Swift</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-medium mb-3 text-slate-800">Tools & Frameworks</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">SAFe</span>
+                        <span class="skill-badge">Scrum</span>
+                        <span class="skill-badge">Jira</span>
+                        <span class="skill-badge">Linux</span>
+                        <span class="skill-badge">Virtual Machines</span>
+                        <span class="skill-badge">UML</span>
+                        <span class="skill-badge">Git (GitHub, GitLab, Bitbucket)</span>
+                        <span class="skill-badge">SVN</span>
+                        <span class="skill-badge">Software Analysis & Design</span>
+                        <span class="skill-badge">OO Design & Development</span>
+                        <span class="skill-badge">Jenkins</span>
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">Bamboo</span>
+                        <span class="skill-badge">GitHub Actions</span>
+                        <span class="skill-badge">CI/CD</span>
+                        <span class="skill-badge">MVVM</span>
+                        <span class="skill-badge">Epoxy</span>
+                        <span class="skill-badge">Retrofit</span>
+                        <span class="skill-badge">ROOM database</span>
+                        <span class="skill-badge">LiveData</span>
+                        <span class="skill-badge">Paging library</span>
+                        <span class="skill-badge">Hibernate</span>
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">Spring framework</span>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-medium mb-3 text-slate-800">Certificates & Concepts</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Azure Training</span>
+                        <span class="skill-badge">System Thinking</span>
+                        <span class="skill-badge">Technology Entrepreneurship</span>
+                        <span class="skill-badge">Docker Containerization</span>
+                        <span class="skill-badge">Artificial Intelligence</span>
+                        <span class="skill-badge">Software Engineering</span>
+                        <span class="skill-badge">Data Structures</span>
+                        <span class="skill-badge">Database Management</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experience" class="card">
+            <h2 class="text-3xl font-semibold section-title">Work Experience Highlights</h2>
+
+            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <h3 class="text-xl font-semibold text-slate-800">Software Professional, ASML</h3>
+                <p class="text-blue-600 mb-2">Oct. 2021 - Present</p>
+                <ul class="list-disc list-inside space-y-1 text-lg">
+                    <li>Collaborated with cross-functional teams to prioritize and manage product backlog, ensuring alignment with business goals.</li>
+                    <li>Acted as a bridge between stakeholders and development teams, ensuring clear communication and delivery of high-value features.</li>
+                    <li>Worked closely with Customer Support and key customers (e.g., Samsung, Sony, Micron) to demonstrate product capabilities and gather feedback.</li>
+                </ul>
+            </div>
+
+            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <h3 class="text-xl font-semibold text-slate-800">System Designer – Monitoring as a Service (MaaS), ASML</h3>
+                <p class="text-blue-600 mb-2">Jan. 2021 – Oct. 2021</p>
+                <ul class="list-disc list-inside space-y-1 text-lg">
+                    <li>Designed and implemented a system for monitoring and visualizing lead time and efficiency of software development processes.</li>
+                    <li>Led the development of MaaS, a flexible, user-oriented framework enabling teams to benchmark performance metrics.</li>
+                    <li>Transformed a conceptual idea into a tangible, scalable product by gathering and aligning metric requirements from diverse stakeholders.</li>
+                    <li>Defined and validated key performance indicators (KPIs) for MX-wide software development processes.</li>
+                    <li>Delivered production-ready, modular dashboards and templates adopted by development teams.</li>
+                </ul>
+            </div>
+
+            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <h3 class="text-xl font-semibold text-slate-800">Industrial Project (Sentiment Analysis tool for Astronauts), ESA: European Space Agency</h3>
+                <p class="text-blue-600 mb-2">Feb 2020 - Dec 2020</p>
+                <ul class="list-disc list-inside space-y-1 text-lg">
+                    <li>Designed and Developed a Sentiment Analysis tool for Astronauts, a.k.a STERN (aSTronaut Emotion RecognitioN).</li>
+                </ul>
+            </div>
+
+            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <h3 class="text-xl font-semibold text-slate-800">Team Lead of Mobile Development, Alibaba Travels Co.</h3>
+                <p class="text-blue-600 mb-2">May 2018 – Oct 2019</p>
+                <ul class="list-disc list-inside space-y-1 text-lg">
+                    <li>Led mobile development efforts, utilizing Android, Kotlin, MVVM, Epoxy, Retrofit, ROOM database, LiveData, and Paging library.</li>
+                </ul>
+            </div>
+
+            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <h3 class="text-xl font-semibold text-slate-800">CTO, Pioneer Process Company (PiProc)</h3>
+                <p class="text-blue-600 mb-2">Sept 2011 – Feb 2016</p>
+                <ul class="list-disc list-inside space-y-1 text-lg">
+                    <li>Led a team of 10 software developers and designers, managing stakeholder expectations and delivering high-quality software solutions.</li>
+                </ul>
+            </div>
+
+            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+                <h3 class="text-xl font-semibold text-slate-800">University Lecturer, University of Semnan & Shahrood University of Technology</h3>
+                <p class="text-blue-600 mb-2">Sept 2010 – July 2015</p>
+                <ul class="list-disc list-inside space-y-1 text-lg">
+                    <li>Taught undergraduate courses including Artificial Intelligence, Advanced Programming (Java), Introduction to Computer and Programming (C), Data Structures (Java / C++), Database Laboratory, and Software Engineering.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="projects" class="card">
+            <h2 class="text-3xl font-semibold section-title">My Projects</h2>
+            <p class="text-lg leading-relaxed mb-4">
+                Throughout my career, I've been involved in a variety of impactful projects, from designing monitoring systems at ASML to developing sentiment analysis tools for the European Space Agency and leading mobile development teams.
+            </p>
+            <p class="text-lg leading-relaxed mb-6">
+                You can explore more of my code and contributions on my GitHub profile. I regularly push updates and new projects there.
+            </p>
+            <div class="text-center">
+                <a href="https://github.com/Merka84" target="_blank" class="btn-primary inline-block font-bold">
+                    View My GitHub Profile
+                </a>
+            </div>
+        </section>
+
+        <section id="contact" class="card">
+            <h2 class="text-3xl font-semibold section-title">Get in Touch</h2>
+            <p class="text-lg leading-relaxed mb-4">
+                I'm always open to discussing new opportunities, collaborations, or interesting projects. Feel free to reach out!
+            </p>
+            <div class="text-center">
+                <a href="mailto:your.personal.email@example.com" class="btn-primary inline-block font-bold">
+                    Email Me
+                </a>
+                <p class="mt-4 text-lg text-slate-700">
+                    <small>Please replace 'your.personal.email@example.com' with your actual personal email address in the code.</small>
+                </p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-slate-800 text-white py-6 mt-8 rounded-t-xl shadow-lg">
+        <div class="container text-center">
+            <p>&copy; 2025 Akram Shokri. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
