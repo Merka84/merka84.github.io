@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +9,7 @@
     <style>
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f8fafc; /* Tailwind gray-50 */
+            background-color: #f8fafc; /* Tailwind gray-50 - very light background */
             color: #334155; /* Tailwind slate-700 */
         }
         .container {
@@ -19,74 +19,128 @@
         }
         .section-title {
             color: #1e293b; /* Tailwind slate-900 */
-            border-bottom: 2px solid #64748b; /* Tailwind slate-500 */
-            padding-bottom: 0.5rem;
-            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #059669; /* Emerald accent for emphasis */
+            padding-bottom: 0.75rem;
+            margin-bottom: 2rem;
+            display: inline-block; /* Ensures border only covers text */
         }
         .card {
             background-color: #ffffff;
-            border-radius: 0.75rem; /* rounded-xl */
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); /* shadow-md */
-            padding: 1.5rem;
-            margin-bottom: 1.5rem;
+            border-radius: 1rem; /* More rounded corners */
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05); /* Stronger shadow */
+            padding: 2rem; /* Increased padding */
+            margin-bottom: 2rem; /* Increased margin */
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+        .card:hover {
+            transform: translateY(-5px); /* Lift effect on hover */
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
         }
         .btn-primary {
-            background-color: #3b82f6; /* Tailwind blue-500 */
+            background-color: #059669; /* Tailwind emerald-600 */
             color: #ffffff;
-            padding: 0.75rem 1.5rem;
-            border-radius: 0.5rem; /* rounded-lg */
-            transition: background-color 0.3s ease;
+            padding: 0.85rem 2rem; /* Slightly larger padding */
+            border-radius: 0.625rem; /* rounded-xl */
+            transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.2s ease;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
         }
         .btn-primary:hover {
-            background-color: #2563eb; /* Tailwind blue-600 */
+            background-color: #047857; /* Tailwind emerald-700 */
+            transform: translateY(-2px); /* Slight lift on hover */
+            box-shadow: 0 6px 8px -2px rgba(0, 0, 0, 0.15);
         }
         .skill-badge {
-            background-color: #e0f2fe; /* Tailwind blue-100 */
-            color: #1e40af; /* Tailwind blue-800 */
-            padding: 0.3rem 0.75rem;
-            border-radius: 0.5rem; /* rounded-lg */
-            font-size: 0.875rem; /* text-sm */
-            font-weight: 500; /* font-medium */
+            background-color: #d1fae5; /* Tailwind emerald-100 */
+            color: #065f46; /* Tailwind emerald-800 */
+            padding: 0.4rem 1rem; /* Slightly larger badge */
+            border-radius: 0.75rem; /* More rounded */
+            font-size: 0.9rem; /* Slightly larger text */
+            font-weight: 600; /* font-semibold */
+            margin-right: 0.5rem; /* Spacing between badges */
+            margin-bottom: 0.5rem;
+            display: inline-block; /* Allows wrapping */
+        }
+        .experience-item {
+            border-left: 4px solid #a7f3d0; /* Light emerald border for timeline effect */
+            padding-left: 1.5rem;
+            margin-left: 0.5rem;
+            position: relative;
+        }
+        .experience-item:before {
+            content: '';
+            position: absolute;
+            left: -10px; /* Adjust to align with border */
+            top: 0.5rem;
+            width: 16px;
+            height: 16px;
+            background-color: #059669; /* Emerald dot */
+            border-radius: 50%;
+            border: 3px solid #ffffff; /* White border for contrast */
+            box-shadow: 0 0 0 2px #059669; /* Outer glow */
+        }
+        .experience-item:last-child {
+            border-left: none; /* No border for the last item */
+            padding-bottom: 0;
         }
     </style>
 </head>
 <body class="antialiased">
 
-    <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-8 rounded-b-xl shadow-lg">
-        <div class="container flex flex-col md:flex-row items-center justify-between">
-            <div class="text-center md:text-left mb-4 md:mb-0">
-                <h1 class="text-4xl font-bold mb-2">Akram Shokri</h1>
-                <p class="text-xl font-light">Experienced Software Professional & Technical Leader</p>
+    <header class="bg-gradient-to-br from-emerald-700 to-teal-900 text-white py-12 rounded-b-3xl shadow-xl">
+        <div class="container flex flex-col md:flex-row items-center justify-center md:justify-between text-center md:text-left">
+            <div class="mb-6 md:mb-0 md:mr-8">
+                <img src="https://placehold.co/150x150/059669/ffffff?text=AS" alt="Akram Shokri Profile" class="rounded-full border-4 border-emerald-300 shadow-lg mx-auto md:mx-0">
             </div>
-            <nav>
-                <ul class="flex space-x-6">
-                    <li><a href="#about" class="hover:text-blue-200 transition-colors duration-300">About</a></li>
-                    <li><a href="#skills" class="hover:text-blue-200 transition-colors duration-300">Skills</a></li>
-                    <li><a href="#experience" class="hover:text-blue-200 transition-colors duration-300">Experience</a></li>
-                    <li><a href="#projects" class="hover:text-blue-200 transition-colors duration-300">Projects</a></li>
-                    <li><a href="#contact" class="hover:text-blue-200 transition-colors duration-300">Contact</a></li>
+            <div>
+                <h1 class="text-5xl font-extrabold mb-2 leading-tight">Akram Shokri</h1>
+                <p class="text-2xl font-light opacity-90">Experienced Software Professional & Technical Leader</p>
+                <div class="mt-4 flex justify-center md:justify-start space-x-4">
+                    <a href="https://github.com/Merka84" target="_blank" class="text-emerald-200 hover:text-white transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.68-.217.68-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.931 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.099 2.65a3.74 3.74 0 011.029 2.682c0 3.823-2.339 4.675-4.562 4.921.357.307.676.91.676 1.854 0 1.338-.012 2.419-.012 2.747 0 .268.208.597.688.483C21.137 20.188 24 16.425 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" />
+                        </svg>
+                    </a>
+                    <a href="mailto:akram.shokri@asml.com" class="text-emerald-200 hover:text-white transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M.05 3.555A2 2 0 012 2h20a2 2 0 011.95 1.555L12 13.25 0 3.555zM0 4.6v14.8c0 1.1.9 2 2 2h20a2 2 0 002-2V4.6l-12 9.7L0 4.6z" />
+                        </svg>
+                    </a>
+                    <!-- <a href="YOUR_LINKEDIN_URL" target="_blank" class="text-emerald-200 hover:text-white transition-colors duration-300">
+                        <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.325-.028-3.044-1.853-3.044-1.854 0-2.136 1.444-2.136 2.956v5.657H9.593V9.218h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.133a2.636 2.636 0 01-2.635-2.636c0-1.467 1.192-2.636 2.635-2.636s2.636 1.169 2.636 2.636c0 1.467-1.193 2.636-2.636 2.636zM6.938 20.452H3.37V9.218h3.568v11.234z" />
+                        </svg>
+                    </a> -->
+                </div>
+            </div>
+            <nav class="mt-8 md:mt-0">
+                <ul class="flex flex-wrap justify-center md:flex-col md:space-y-2 space-x-4 md:space-x-0">
+                    <li><a href="#about" class="block py-2 px-4 hover:bg-emerald-600 rounded-lg transition-all duration-300">About</a></li>
+                    <li><a href="#skills" class="block py-2 px-4 hover:bg-emerald-600 rounded-lg transition-all duration-300">Skills</a></li>
+                    <li><a href="#experience" class="block py-2 px-4 hover:bg-emerald-600 rounded-lg transition-all duration-300">Experience</a></li>
+                    <li><a href="#projects" class="block py-2 px-4 hover:bg-emerald-600 rounded-lg transition-all duration-300">Projects</a></li>
+                    <li><a href="#contact" class="block py-2 px-4 hover:bg-emerald-600 rounded-lg transition-all duration-300">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <main class="container py-8">
+    <main class="container py-10">
 
         <section id="about" class="card">
             <h2 class="text-3xl font-semibold section-title">About Me</h2>
-            <p class="text-lg leading-relaxed mb-4">
+            <p class="text-lg leading-relaxed mb-4 text-slate-700">
                 I am an experienced software professional with over 10 years of success in Agile product development, stakeholder engagement, and technical leadership. I am skilled in delivering high-impact software solutions within complex, high-tech environments. Adept in SAFe and Scrum frameworks, I have a strong track record in communication, strategic decision-making, and driving cross-functional collaboration.
             </p>
-            <p class="text-lg leading-relaxed">
+            <p class="text-lg leading-relaxed text-slate-700">
                 I hold an EngD (Engineering Doctorate) in Software Technology from Technische Universiteit Eindhoven (TU/e), Netherlands, and an M.Sc. in Artificial Intelligence from Iran University of Science and Technology. My academic background combined with extensive industry experience allows me to bridge theoretical knowledge with practical, scalable solutions.
             </p>
         </section>
 
         <section id="skills" class="card">
             <h2 class="text-3xl font-semibold section-title">Skills & Expertise</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div>
-                    <h3 class="text-xl font-medium mb-3 text-slate-800">Programming Languages</h3>
+                    <h3 class="text-xl font-medium mb-4 text-slate-800">Programming Languages</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-badge">Java</span>
                         <span class="skill-badge">C</span>
@@ -100,7 +154,7 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-xl font-medium mb-3 text-slate-800">Tools & Frameworks</h3>
+                    <h3 class="text-xl font-medium mb-4 text-slate-800">Tools & Frameworks</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-badge">SAFe</span>
                         <span class="skill-badge">Scrum</span>
@@ -129,7 +183,7 @@
                     </div>
                 </div>
                 <div>
-                    <h3 class="text-xl font-medium mb-3 text-slate-800">Certificates & Concepts</h3>
+                    <h3 class="text-xl font-medium mb-4 text-slate-800">Certificates & Concepts</h3>
                     <div class="flex flex-wrap gap-2">
                         <span class="skill-badge">Azure Training</span>
                         <span class="skill-badge">System Thinking</span>
@@ -147,20 +201,20 @@
         <section id="experience" class="card">
             <h2 class="text-3xl font-semibold section-title">Work Experience Highlights</h2>
 
-            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+            <div class="mb-8 experience-item">
                 <h3 class="text-xl font-semibold text-slate-800">Software Professional, ASML</h3>
-                <p class="text-blue-600 mb-2">Oct. 2021 - Present</p>
-                <ul class="list-disc list-inside space-y-1 text-lg">
+                <p class="text-emerald-600 mb-2 text-base">Oct. 2021 - Present</p>
+                <ul class="list-disc list-inside space-y-1 text-lg text-slate-700">
                     <li>Collaborated with cross-functional teams to prioritize and manage product backlog, ensuring alignment with business goals.</li>
                     <li>Acted as a bridge between stakeholders and development teams, ensuring clear communication and delivery of high-value features.</li>
                     <li>Worked closely with Customer Support and key customers (e.g., Samsung, Sony, Micron) to demonstrate product capabilities and gather feedback.</li>
                 </ul>
             </div>
 
-            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+            <div class="mb-8 experience-item">
                 <h3 class="text-xl font-semibold text-slate-800">System Designer – Monitoring as a Service (MaaS), ASML</h3>
-                <p class="text-blue-600 mb-2">Jan. 2021 – Oct. 2021</p>
-                <ul class="list-disc list-inside space-y-1 text-lg">
+                <p class="text-emerald-600 mb-2 text-base">Jan. 2021 – Oct. 2021</p>
+                <ul class="list-disc list-inside space-y-1 text-lg text-slate-700">
                     <li>Designed and implemented a system for monitoring and visualizing lead time and efficiency of software development processes.</li>
                     <li>Led the development of MaaS, a flexible, user-oriented framework enabling teams to benchmark performance metrics.</li>
                     <li>Transformed a conceptual idea into a tangible, scalable product by gathering and aligning metric requirements from diverse stakeholders.</li>
@@ -169,72 +223,72 @@
                 </ul>
             </div>
 
-            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+            <div class="mb-8 experience-item">
                 <h3 class="text-xl font-semibold text-slate-800">Industrial Project (Sentiment Analysis tool for Astronauts), ESA: European Space Agency</h3>
-                <p class="text-blue-600 mb-2">Feb 2020 - Dec 2020</p>
-                <ul class="list-disc list-inside space-y-1 text-lg">
+                <p class="text-emerald-600 mb-2 text-base">Feb 2020 - Dec 2020</p>
+                <ul class="list-disc list-inside space-y-1 text-lg text-slate-700">
                     <li>Designed and Developed a Sentiment Analysis tool for Astronauts, a.k.a STERN (aSTronaut Emotion RecognitioN).</li>
                 </ul>
             </div>
 
-            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+            <div class="mb-8 experience-item">
                 <h3 class="text-xl font-semibold text-slate-800">Team Lead of Mobile Development, Alibaba Travels Co.</h3>
-                <p class="text-blue-600 mb-2">May 2018 – Oct 2019</p>
-                <ul class="list-disc list-inside space-y-1 text-lg">
+                <p class="text-emerald-600 mb-2 text-base">May 2018 – Oct 2019</p>
+                <ul class="list-disc list-inside space-y-1 text-lg text-slate-700">
                     <li>Led mobile development efforts, utilizing Android, Kotlin, MVVM, Epoxy, Retrofit, ROOM database, LiveData, and Paging library.</li>
                 </ul>
             </div>
 
-            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+            <div class="mb-8 experience-item">
                 <h3 class="text-xl font-semibold text-slate-800">CTO, Pioneer Process Company (PiProc)</h3>
-                <p class="text-blue-600 mb-2">Sept 2011 – Feb 2016</p>
-                <ul class="list-disc list-inside space-y-1 text-lg">
+                <p class="text-emerald-600 mb-2 text-base">Sept 2011 – Feb 2016</p>
+                <ul class="list-disc list-inside space-y-1 text-lg text-slate-700">
                     <li>Led a team of 10 software developers and designers, managing stakeholder expectations and delivering high-quality software solutions.</li>
                 </ul>
             </div>
 
-            <div class="mb-6 pb-4 border-b border-gray-200 last:border-b-0">
+            <div class="experience-item">
                 <h3 class="text-xl font-semibold text-slate-800">University Lecturer, University of Semnan & Shahrood University of Technology</h3>
-                <p class="text-blue-600 mb-2">Sept 2010 – July 2015</p>
-                <ul class="list-disc list-inside space-y-1 text-lg">
+                <p class="text-emerald-600 mb-2 text-base">Sept 2010 – July 2015</p>
+                <ul class="list-disc list-inside space-y-1 text-lg text-slate-700">
                     <li>Taught undergraduate courses including Artificial Intelligence, Advanced Programming (Java), Introduction to Computer and Programming (C), Data Structures (Java / C++), Database Laboratory, and Software Engineering.</li>
                 </ul>
             </div>
         </section>
 
-        <section id="projects" class="card">
+        <section id="projects" class="card text-center">
             <h2 class="text-3xl font-semibold section-title">My Projects</h2>
-            <p class="text-lg leading-relaxed mb-4">
+            <p class="text-lg leading-relaxed mb-6 text-slate-700">
                 Throughout my career, I've been involved in a variety of impactful projects, from designing monitoring systems at ASML to developing sentiment analysis tools for the European Space Agency and leading mobile development teams.
-            </p>
-            <p class="text-lg leading-relaxed mb-6">
                 You can explore more of my code and contributions on my GitHub profile. I regularly push updates and new projects there.
             </p>
-            <div class="text-center">
-                <a href="https://github.com/Merka84" target="_blank" class="btn-primary inline-block font-bold">
-                    View My GitHub Profile
-                </a>
-            </div>
+            <a href="https://github.com/Merka84" target="_blank" class="btn-primary inline-flex items-center space-x-2 font-bold">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.47.087.68-.217.68-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.529 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.931 0-1.091.39-1.984 1.029-2.682-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.099 2.65a3.74 3.74 0 011.029 2.682c0 3.823-2.339 4.675-4.562 4.921.357.307.676.91.676 1.854 0 1.338-.012 2.419-.012 2.747 0 .268.208.597.688.483C21.137 20.188 24 16.425 24 12.017 24 6.484 19.522 2 14 2h-2z" clip-rule="evenodd" />
+                </svg>
+                <span>View My GitHub Profile</span>
+            </a>
         </section>
 
-        <section id="contact" class="card">
+        <section id="contact" class="card text-center">
             <h2 class="text-3xl font-semibold section-title">Get in Touch</h2>
-            <p class="text-lg leading-relaxed mb-4">
+            <p class="text-lg leading-relaxed mb-6 text-slate-700">
                 I'm always open to discussing new opportunities, collaborations, or interesting projects. Feel free to reach out!
             </p>
-            <div class="text-center">
-                <a href="mailto:ashokri.ac@gmail.com" class="btn-primary inline-block font-bold">
-                    Email Me
-                </a>
-            
-            </div>
+            <a href="mailto:ashokri.ac@gmail.com" class="btn-primary inline-flex items-center space-x-2 font-bold">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M.05 3.555A2 2 0 012 2h20a2 2 0 011.95 1.555L12 13.25 0 3.555zM0 4.6v14.8c0 1.1.9 2 2 2h20a2 2 0 002-2V4.6l-12 9.7L0 4.6z" />
+                </svg>
+                <span>Email Me</span>
+            </a>
         </section>
 
     </main>
 
-    <footer class="bg-slate-800 text-white py-6 mt-8 rounded-t-xl shadow-lg">
-        <div class="container text-center">
+    <footer class="bg-slate-800 text-white py-8 mt-10 rounded-t-3xl shadow-xl">
+        <div class="container text-center text-lg">
             <p>&copy; 2025 Akram Shokri. All rights reserved.</p>
+            <p class="mt-2 text-sm opacity-80">Built with passion and code.</p>
         </div>
     </footer>
 
